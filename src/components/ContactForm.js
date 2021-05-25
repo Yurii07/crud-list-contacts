@@ -38,7 +38,7 @@ const ContactForm = (props) => {
     }
 
     return (
-        <form autoComplete='off' onSubmit={handleFormSubmit}>
+        <form autoComplete='off' onSubmit={handleFormSubmit} >
 
             <div className="form-group input-group flex-nowrap col-md-12">
                 <div className="input-group mb-3">
@@ -46,6 +46,7 @@ const ContactForm = (props) => {
                     <input type="text" className="form-control" placeholder={'Full Name'} name={'fullName'}
                            value={values.fullName}
                            onChange={handleInputChange}
+                           required
                     />
                 </div>
             </div>
@@ -58,6 +59,7 @@ const ContactForm = (props) => {
                         <input type="text" className="form-control" placeholder='Mobile' name='mobile'
                                value={values.mobile}
                                onChange={handleInputChange}
+                               required
                         />
                     </div>
                 </div>
@@ -70,6 +72,7 @@ const ContactForm = (props) => {
                         <input type="text" className="form-control" placeholder='Email' name='email'
                                value={values.email}
                                onChange={handleInputChange}
+                               required
                         />
                     </div>
                 </div>
